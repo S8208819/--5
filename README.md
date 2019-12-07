@@ -141,10 +141,85 @@ btn1.addActionListener(new ActionListener(){
 			}  
 		});  
 添加相关按钮、信息  
-7.  
+7.  读取、新建、录入的类  
+声明了三个构造方法并加入了异常处理，新建txt文本将所写数据录入进去，以便上面程序的调用： 
+	public String readFile(String filename) {  
+		  String str="";  
+		  String pathname = "C:\\Users\\cokeice\\Desktop\\text"+filename+".txt";  
+		  try (FileReader reader = new FileReader(pathname);  
+		       BufferedReader br = new BufferedReader(reader)   
+		  ) {  
+		      String line;  
+		      while ((line = br.readLine()) != null) {  
+		      	str=str+line;  
+		      }  
+
+		  } catch (IOException e) {  
+		      e.printStackTrace();  
+		  }  
+		  return str;  
+	}
+	
+	public void writeFile(String filename,String s) {  
+		String pathname = "C:\\Users\\cokeice\\Desktop\\text"+filename+".txt";  
+		  try {  
+			  if(filename=="Admin") {  
+		      File writeName = new File(pathname);  
+		      writeName.createNewFile();   
+		      try (FileWriter writer = new FileWriter(writeName,true);  
+		           BufferedWriter out = new BufferedWriter(writer)  
+		      ) {  
+		      		if(s!=null) {  
+		      		out.write(s);   
+		      	}  
+		          out.flush();   
+		      }  
+			  }  
+			  else {  
+				  File writeName = new File(pathname);   
+			      writeName.createNewFile();   
+			      try (FileWriter writer = new FileWriter(writeName);  
+			           BufferedWriter out = new BufferedWriter(writer)  
+			      ) {  
+			      		if(s!=null) {  
+			      		out.write(s);   
+			      	}  
+			          out.flush();   
+			      }  
+			  } 
+		  } catch (IOException e) {  
+		      e.printStackTrace();  
+		  }  
+	}  
+	
+	public void WriteFile(String[] s,String filename) {  
+		try {  
+            File writeName = new File("C:\\Users\\cokeice\\Desktop\\text"+filename+".txt");   
+            writeName.createNewFile();   
+            try (FileWriter writer = new FileWriter(writeName,true);  
+                 BufferedWriter out = new BufferedWriter(writer)  
+            ) {  
+            	for(int i=0;i<s.length;i++) {  
+            		if(s[i]!=null) {  
+            		out.write(s[i]);   
+            	}  
+                out.flush();  
+            }  
+            }  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }  
+   }  
+8.主菜单的类：  
+（1）声明main，设置窗体、按钮并添加  
+（2）点击触发事件，弹窗到学生选课系统或者新增课程界面  
+（3）主函数：  
+	public static void main(String[] args) {  
+	    new Menu();  
+	    }  
  
-  
 三、实验运行结果截图：  
 
-四、总结  
-本次的java实验整体上还是比较简单地，整节实验课让我了解到字符串的相关知识，让我获益匪浅，在程序中，我学习到了很多新的内容，同时也复习到了之前学习的很多内容，在对字符串中的字符进行查找时，先输入查找内容，再进行遍历，并输出遍历结果，这个内容让我复习到了之前学习的其他相关知识，在对整首古诗的进行分隔的操作，我利用循环进行判断，看他是否满足7个字符和2个字符分别进行判断来达到进行分隔的效果，总之，整个实验还是让我收获了许多内容。  
+
+四、总结    
+本次的java实验整体上还是比较复杂，整节实验课让我了解到java整个学期学习的相关知识，让我获益匪浅，在程序中，我学习到了很多新的内容，同时也复习到了之前学习的很多内容，不仅用到了之前学习的gui编程、方法构造等内容，也用了后面学习的io流输入输出等内容，整体难度较高，最后的程序做出来还有一些小问题，总之，整个实验还是让我收获了许多内容。  
