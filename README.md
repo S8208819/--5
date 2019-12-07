@@ -142,7 +142,7 @@ btn1.addActionListener(new ActionListener(){
 		});  
 添加相关按钮、信息  
 7.  读取、新建、录入的类  
-声明了三个构造方法并加入了异常处理，新建txt文本将所写数据录入进去，以便上面程序的调用： 
+声明了三个构造方法并加入了异常处理，新建txt文本将所写数据录入进去，以便上面程序的调用：    
 	public String readFile(String filename) {  
 		  String str="";  
 		  String pathname = "C:\\Users\\cokeice\\Desktop\\text"+filename+".txt";  
@@ -153,13 +153,11 @@ btn1.addActionListener(new ActionListener(){
 		      while ((line = br.readLine()) != null) {  
 		      	str=str+line;  
 		      }  
-
-		  } catch (IOException e) {  
+		      } catch (IOException e) {  
 		      e.printStackTrace();  
 		  }  
 		  return str;  
 	}
-	
 	public void writeFile(String filename,String s) {  
 		String pathname = "C:\\Users\\cokeice\\Desktop\\text"+filename+".txt";  
 		  try {  
@@ -190,9 +188,8 @@ btn1.addActionListener(new ActionListener(){
 		  } catch (IOException e) {  
 		      e.printStackTrace();  
 		  }  
-	}  
-	
-	public void WriteFile(String[] s,String filename) {  
+	}   
+	public void WriteFile(String[] s,String filename) {   
 		try {  
             File writeName = new File("C:\\Users\\cokeice\\Desktop\\text"+filename+".txt");   
             writeName.createNewFile();   
