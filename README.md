@@ -13,7 +13,8 @@
 5、	基于Github.com提交实验，包括实验SRC源文件夹程序、README.MD实验报告文档。  
 6、	本次实验是综合性实验，在40%的实验成绩中占比最大，望同学们认真对待。  
 三、调试过程：
-1.建立不同的类，分别对学生、教师、课程的方法属性进行定义：  
+1.建立不同的类，分别对学生、教师、课程的方法属性进行定义： 
+
 	public Students(String id, String name, String sex,Subject choicesub,String score) {  
 		super(id, name, sex);  
 		this.choicesub=choicesub;  
@@ -37,6 +38,7 @@
 	}
   2.事先设定好的部分教师、课程信息的类  
   提前设定好的部分信息，如下：  
+  
   	Teacher teaone=new Teacher("001","杜老师","F","Math");  
 		Teacher teatwo=new Teacher("002","张老师","M","Java");  
 		Teacher teathree=new Teacher("003","高老师","M","Physics");  
@@ -64,7 +66,8 @@
   （2）该类中的主函数，创建窗体并运行上述函数  
   4.选课的类的编写  
   （1）声明函数，调用读取txt文件的类和事先设定好的部分教师、课程信息的类，并设置点击触发事件并随后添加：  
-  btn1.addActionListener(new ActionListener(){  
+  
+    btn1.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent arg0) {  
 				if(list.isSelectionEmpty()){   
 					JOptionPane.showMessageDialog(null, "您没有退课！");  
@@ -89,7 +92,8 @@
    （2）写该类的的主函数，调用上述函数，设置窗体、弹窗  
  5.退课的类的编写  
  （1）声明函数，调用读取txt文件的类及定义相关操作如下：  
- String[] s2=new String[20];  
+ 
+                String[] s2=new String[20];  
 		FileOperations file=new FileOperations();  
 		JFrame frame=new JFrame();  
 		frame.setTitle("Quit");  
@@ -98,7 +102,8 @@
 		JList list =new JList(s2);  
 		JButton btn1=new JButton("退课");  
 点击触发事件及异常处理和退课相关操，如下：  
-btn1.addActionListener(new ActionListener(){  
+
+      btn1.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent arg0) {  
 				String[] s2=file.readFile(file.readFile("ID")).split("。");  
 				if(list.isSelectionEmpty()){  
@@ -128,7 +133,8 @@ btn1.addActionListener(new ActionListener(){
  （2）该类主函数，调用上述函数，设置窗体、弹窗  
  6.打印选课信息相关的类  
  （1）声明函数，调用读取txt文件的类及定义相关操作，并设置点击触发事件：  
- String[] s2=new String[5];  
+   
+                String[] s2=new String[5];  
 		JFrame frame=new JFrame();  
 		frame.setTitle("Quit");  
 		JPanel panel2=new JPanel();  
@@ -142,7 +148,8 @@ btn1.addActionListener(new ActionListener(){
 		});  
 添加相关按钮、信息  
 7.  读取、新建、录入的类  
-声明了三个构造方法并加入了异常处理，新建txt文本将所写数据录入进去，以便上面程序的调用：    
+声明了三个构造方法并加入了异常处理，新建txt文本将所写数据录入进去，以便上面程序的调用：   
+
 	public String readFile(String filename) {  
 		  String str="";  
 		  String pathname = "C:\\Users\\cokeice\\Desktop\\text"+filename+".txt";  
@@ -211,6 +218,7 @@ btn1.addActionListener(new ActionListener(){
 （1）声明main，设置窗体、按钮并添加  
 （2）点击触发事件，弹窗到学生选课系统或者新增课程界面  
 （3）主函数：  
+	
 	public static void main(String[] args) {  
 	    new Menu();  
 	    }  
