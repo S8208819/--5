@@ -224,7 +224,14 @@
 	    }  
  
 三、实验运行结果截图：  
-
+![e](https://github.com/S8208819/--5/blob/master/0c0db1ba0e18c6da11d167a4fff9e69.png)  
+![e](https://github.com/S8208819/--5/blob/master/052b8ced5eeaedcad8b4a2d6647a7dd.png) 
+![e](https://github.com/S8208819/--5/blob/master/421dddbc5e6e26c7105c59fa5439ed7.png) 
+![e](https://github.com/S8208819/--5/blob/master/28e03b4384bd975419db96b00ec609b.png) 
+![e](https://github.com/S8208819/--5/blob/master/6af67ea21c8e59b4eb4635da26cb5ff.png)  
+![e](https://github.com/S8208819/--5/blob/master/3d9d016896823106cbbae088960a3c1.png)   
+![e](https://github.com/S8208819/--5/blob/master/8972fb80865d309d7dca9ec823e16b4.png)  
+![e](https://github.com/S8208819/--5/blob/master/c77675b6fa60f6ce49f63fdcf12c13b.png)  
 
 四、总结    
 本次的java实验整体上还是比较复杂，整节实验课让我了解到java整个学期学习的相关知识，让我获益匪浅，在程序中，我学习到了很多新的内容，同时也复习到了之前学习的很多内容，不仅用到了之前学习的gui编程、方法构造等内容，也用了后面学习的io流输入输出等内容，整体难度较高，最后的程序做出来还有一些小问题，总之，整个实验还是让我收获了许多内容。  
